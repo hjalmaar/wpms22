@@ -3,12 +3,14 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 
 const ListItem = (props) =>{
+  const mediaUrl = 'https://media.mw.metropolia.fi/wbma/uploads/';
+  console.log(props.singleMedia);
   return (
     <TouchableOpacity style={styles.row}>
       <View style={styles.box}>
         <Image
           style={styles.image}
-          source={{uri: props.singleMedia.thumbnails.w160}}
+          source={{uri: mediaUrl + props.singleMedia.thumbnails.w160}}
         />
       </View>
       <View style={styles.box}>
