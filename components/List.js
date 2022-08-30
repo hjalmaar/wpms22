@@ -2,7 +2,7 @@ import {FlatList} from 'react-native';
 import {useMedia} from '../hooks/ApiHooks';
 import ListItem from './ListItem';
 
-const List = (props) => {
+const List = (navigation) => {
   const {mediaArray} = useMedia();
 
   return (
@@ -11,7 +11,7 @@ const List = (props) => {
       keyExtractor={(item, index) => index.toString()}
       renderItem={
         ({item}) => <ListItem
-          navigation={props.navigation} // without destucturing
+          navigation={navigation.navigation} // without destucturing
           singleMedia={item}
         />
       }

@@ -7,7 +7,7 @@ const ListItem = ({singleMedia, navigation}) => {
   return (
     <TouchableOpacity style={styles.row} onPress={
                         () => {
-                          navigation.navigate('Single');
+                          navigation.navigate('Single', singleMedia);
                         }}
     >
       <View style={styles.box}>
